@@ -8,7 +8,7 @@ def main():
     parser.add_argument("--function-name", help="ARN of the lambda to call", required=True)
     parser.add_argument("--region", help="AWS region", default="eu-west-1")
     args = parser.parse_args()
-    print args
+    print(args)
     queueurl = args.queue_url
     lambdaarn = args.function_name
     region = args.region
