@@ -1,18 +1,17 @@
-FROM  python:3.6-alpine3.7
+FROM python:3.9-alpine
+
+LABEL maintainer="petersen@temp.dk"
 
 RUN apk --update add git openssh && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*  &&  \
-    mkdir /sqs
+    mkdir /app
 
-WORKDIR /sqs
-
-ADD requirements.txt .
-ADD sqs-lambda-processor.py .
+COPY . /app
+WORKDIR /app
 
 
-RUN ls && \
-    pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 STOPSIGNAL SIGTERM
 
