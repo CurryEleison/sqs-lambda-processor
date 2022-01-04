@@ -9,6 +9,7 @@ ENV/
 
 .git/
 .gitignore
+.github/
 Dockerfile
 README.md
 
