@@ -21,7 +21,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: curryeleison/sqs2s3
+          images: curryeleison/sqs2lambda
           flavor: |
             latest=${{ github.ref == 'refs/heads/master' }}
           tags: |
