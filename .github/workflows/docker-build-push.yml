@@ -1,10 +1,10 @@
-name: Sqs2S3 container image build and push
+name: Sqs2Lambda container image build and push
 
 on: push
 
 jobs:
   imagebuild:
-    name: Build Sqs2S3 container image and push if on master branch
+    name: Build Sqs2Lambda container image and push if on master branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
